@@ -93,9 +93,17 @@ def spaceman(secret_word):
 
 
 
-
-
-
 #These function calls that will start the game
 secret_word = load_word()
 spaceman(secret_word)
+
+# while statement to play again
+while True:
+    secret_word = load_word()
+    if secret_word:
+        spaceman(secret_word)
+
+    play_again = input("would you like to play again? (yes/no)  > ").lower()
+    if play_again != 'yes':
+        print("Thank You For Playing!!")
+        break
